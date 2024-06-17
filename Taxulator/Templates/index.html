@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Fare Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Taxi Fare Calculator</h1>
+        <label for="passengerNumber">Number of Passengers:</label>
+        <input type="number" id="passengerNumber" min="0">
+        <br>
+        <label for="taxiFare">Taxi Fare (R):</label>
+        <input type="number" id="taxiFare" min="0" step="0.01">
+        <br>
+        <button onclick="calculateDriverCash()">Calculate Driver Cash</button>
+        <div class="result">
+            <h2>Driver Cash: <span id="driverCash">0</span></h2>
+        </div>
+        <div class="section-info" id="sectionInfo">
+            <h2>Section Information</h2>
+            <div id="sections"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
